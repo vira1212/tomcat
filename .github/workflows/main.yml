@@ -15,10 +15,8 @@ env:
 
 
 jobs:
-
-  build:
-    # JDKxx_Matrix:
-     strategy:
+build:
+  strategy:
       fail-fast: false
       run-on: ubuntu-latest
       matrix:
