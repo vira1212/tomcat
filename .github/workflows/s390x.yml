@@ -3,7 +3,7 @@ on:
   push:
     branches:
 
-      - main  # Change this to your default branch name
+      - main  # Change this to your default branch
       - 10.1.x
       - 9.0.x
       - 8.5.x
