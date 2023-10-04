@@ -64,7 +64,7 @@ jobs:
       id: runcmd
       with:
           arch: s390x
-          distro: ubuntu20.04
+          distro: ubuntu23.04
           run: |
             apt-get update
             apt-get install -y ant
