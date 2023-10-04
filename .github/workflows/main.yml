@@ -49,6 +49,13 @@ jobs:
       run: echo "::set-output name=arch::$(uname -m)"
     - name: Git Checkout
       uses: actions/checkout@v3
+    - uses: uraimo/run-on-arch-action@v2
+      name: Run commands
+      id: runcmd
+      with:
+          arch: s390x
+          distro: ubuntu20.04
+
     - name: Set up QEMU for s390x
       uses: docker/setup-qemu-action@v1
       with:
@@ -62,8 +69,9 @@ jobs:
         distribution: zulu
     - name: Build
       run: |
-        if [ "${{ steps.check_arch.outputs.arch }}" == "s390x" ]; then
-        uname -a; ant -noinput echoproperties deploy embed test-nio test-status
+        if [ "${{ steps.check_arch.outputs.arch }}" == "s390x" ]; 
+        then
+           uname -a; ant -noinput echoproperties deploy embed test-nio test-status
         else
          echo "Skipping the job as it's not running on s390x architecture."
       
