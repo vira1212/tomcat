@@ -28,7 +28,6 @@ env:
 
 jobs:
   JDKxx_Matrix:
-    if: matrix.arch == 's390x'
     strategy:
       fail-fast: false
       matrix:
@@ -44,6 +43,7 @@ jobs:
             java: 20
     name: JDK${{ matrix.java }} ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
+    if: matrix.arch == 's390x'
     steps:
     - name: Git Checkout
       uses: actions/checkout@v3
