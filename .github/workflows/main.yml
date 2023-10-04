@@ -34,13 +34,11 @@ jobs:
         isMain:
           - ${{ contains(github.ref, 'main') }}
         arch: [s390x]
-        java: [ 17]
+        java: [8,11, 17]
         os: [ ubuntu-20.04 ]
         exclude:
           - isMain: true
             java: 17
-          - isMain: true
-            java: 20
     name: JDK${{ matrix.java }} ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     steps:
