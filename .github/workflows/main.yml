@@ -58,6 +58,7 @@ jobs:
       uses: actions/setup-java@v3
       with:
         java-version: ${{ matrix.java }}
+        distribution: openjdk
     - name: Build
       uses: uraimo/run-on-arch-action@v2
       id: runcmd
