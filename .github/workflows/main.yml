@@ -35,7 +35,7 @@ jobs:
           - ${{ contains(github.ref, 'main') }}
         arch: [s390x]
         java: [8,11, 17]
-        os: [ ubuntu-20.04 ]
+        os: [ ubuntu-23.04 ]
         exclude:
           - isMain: true
             java: 17
