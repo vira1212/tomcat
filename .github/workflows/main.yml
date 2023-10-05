@@ -34,8 +34,8 @@ jobs:
         isMain:
           - ${{ contains(github.ref, 'main') }}
         arch: [s390x]
-        java: [8,11, 17]
-        os: [ ubuntu-20.04 ]
+        java: [21]
+        os: [ ubuntu_latest ]
         exclude:
           - isMain: true
             java: 17
@@ -64,7 +64,7 @@ jobs:
       id: runcmd
       with:
           arch: s390x
-          distro: ubuntu20.04
+          distro: ubuntu_latest
           run: |
             apt-get update
             apt-get install -y ant
