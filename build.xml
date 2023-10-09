@@ -990,6 +990,7 @@
            release="${compile.release}"
            encoding="ISO-8859-1"
            includeAntRuntime="true" >
+       <compilerarg value="--enable-preview"/>
       <!-- Uncomment this to show unchecked warnings:
       <compilerarg value="-Xlint:unchecked"/>
       -->
