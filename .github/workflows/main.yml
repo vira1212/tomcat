@@ -15,13 +15,10 @@ name: CI test for s390x
 on:
   push:
     branches:
-      - main
       - 10.1.x
-      - 9.0.x
-      - 8.5.x
   pull_request:
     branches:
-      - main
+       - 10.1.x
 
 env:
   LC_ALL: en_US.UTF-8
@@ -57,7 +54,7 @@ jobs:
     - name: Set up Java
       uses: actions/setup-java@v3
       with:
-        java-version: 21
+        java-version: 11
         distribution: zulu
     - name: Build
       uses: uraimo/run-on-arch-action@v2
