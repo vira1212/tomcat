@@ -15,12 +15,13 @@ name: CI test for s390x
 on:
   push:
     branches:
-      - main
       - 10.1.x
       - 9.0.x
       - 8.5.x
+      - main
   pull_request:
     branches:
+       - 10.1.x
        - main
 
 env:
